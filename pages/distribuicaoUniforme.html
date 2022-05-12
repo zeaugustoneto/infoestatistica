@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+    <!-- METAS BÁSICAS DA PÁGINA
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <meta charset="utf-8">
+    <title>Calculadora Estatística</title>
+    <meta name="description" content="Projeto de Estatística do 3º Ciclo de ADS da Fatec-Franca">
+  
+    <!-- METAS ESPECÍFICAS PARA CELULAR
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <!-- <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" /> -->
+
+    <!-- FONTES E ÍCONES
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link rel="stylesheet" type="text/css" href="../css/fonts-googleApi-openSans.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+    <!-- CSS
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link rel="stylesheet" type="text/css" href="../css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="../css/skeleton.css">
+    <link rel="stylesheet" type="text/css" href="../css/main.css">
+    <link rel="stylesheet" type="text/css" href="../css/jquery-ui.css">
+
+    <!-- MENU
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link rel="stylesheet" type="text/css" href="../css/component.css" />
+
+    <!-- SCRIPT MENU
+    ––––––––––––––––––––––––––––––––––––––––––––––––––-->
+    <script src="../js/modernizr.custom.js"></script>
+
+    <!-- FAVICON
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link rel="icon" type="image/png" href="../imagens/favicon.png">
+
+
+</head>
+
+<body class="corpo">
+
+        <!-- ESTRUTURA DE LAYOUT
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <div class="section categories">
+
+        <div class="container">
+            <div class="row">
+                <div class="logo">
+                    <img src="../imagens/logo.png" alt="">
+
+                    
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+<br>
+    <!-- MENU LATERAL
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
+    <div class="container-menu">
+        <!--barra superior do menu-->
+        <ul id="gn-menu" class="gn-menu-main">
+            <li class="gn-trigger">
+                <a class="gn-icon gn-icon-menu"><span>Menu</span></a>          
+                <li><a href="../index.html">Home</a></li>
+                <nav class="gn-menu-wrapper">
+                    <div class="gn-scroller">
+                        <ul class="gn-menu" id="menu-lateral">
+
+
+                            <a href="descritiva.html"><i class="material-icons">table_chart</i>Estatística
+                                Descritiva</a>
+                            <a href="distribuicaoNormal.html"><i class="material-icons">insights</i>Distribuição
+                                Normal</a>
+                            <a href="distribuicaoBinomial.html"><i
+                                    class="material-icons">pie_chart</i>Distribuição Binomial</a>
+                            <a href="distribuicaoUniforme.html"><i
+                                    class="material-icons">ssid_chart</i>Distribuição Uniforme</a>
+
+                            <a href="correlacaoRegressao.html"><i class="material-icons">troubleshoot</i>Correlação de
+                                Regressão</a>
+                             </ul>
+                    </div>
+                </nav>
+  
+        </ul>
+
+    </div>
+
+    <!-- CONTEUDO PRINCIPAL
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
+ 
+
+    <!-- Título 2 -->
+    <div class="section categories-titulo2">
+        <h3 class="titulo">DISTRIBUIÇÃO DE PROBABILIDADES UNIFORME</h3>
+    </div>
+
+    <!-- Calculadora Inferencial Uniforme-->
+
+    <!-- Ponto Mínimo -->
+    <div class="section categories-medidas">
+        <div class="container">
+            <div class="row">
+                <div class="ten column medidas">
+                    <label for="minimo" class="textoDados">Ponto Mínimo:</label>
+                    <input id="pontoMinimo" type="number" name="pMinimo" class="pMinimo"
+                        placeholder="Insira aqui o valor do Ponto Mínimo">
+                    <br>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Ponto Máximo -->
+    <div class="section categories-medidas">
+        <div class="container">
+            <div class="row">
+                <div class="ten column medidas">
+                    <label for="maximo" class="textoDados">Ponto Máximo:</label>
+                    <input id="pontoMaximo" type="number" name="pMaximo" class="pMaximo"
+                        placeholder="Insira aqui o valor do Ponto Máximo">
+                    <br>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Intervalo -->
+    <div class="section categories-separatriz">
+        <div class="container">
+            <div class="row">
+                <div class="ten column separatriz">
+                    <label for="valorIntervalo" class="textoDados">Selecione o Intervalo:</label>
+                    <select id="opcoes_Duniforme" class="eIntervalo">
+                        <option value="">Selecione o Intervalo</option>
+                        <option value="maiorQue">Maior que</option>
+                        <option value="entre">Entre</option>
+                        <option value="menorQue">Menor que</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Valores -->
+    <div class="section categories-medidas">
+        <div class="container">
+            <div class="row">
+                <div class="ten column medidas">
+                    <label for="valorIntervalo" class="textoDados">Insira o(s) Valor(es) do(s) Intervalo(s):</label>
+                    <input id="valor" type="number" name="vIntervalo" class="vIntervalo"
+                        placeholder="Quando o intervalo for Entre dois números, separar por ponto e vírgula (;).">
+                    <br>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <!-- Botões -->
+    <div class="section categories-botoes">
+        <div class="container">
+            <div class="row">
+                <div class="one-half column calcular">
+                    <a href="#resultado">
+                        <button id="botao_uniforme" class="button-primary" aria-placeholder="Calcular">Calcular</button>
+                    </a>
+                </div>
+
+                <div class="one-half column limpar">
+                    <a href="#topo"><button type="reset" value="Limpar" class="button" placeholder="Limpar"
+                            onclick="Refresh()">Limpar</button></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <a name="resultado"></a>
+
+    <br>
+
+    <!-- Resultados -->
+    <!-- Tabela -->
+    <div class="section categories-resultados">
+        <div class="container">
+            <div class="row">
+                <div class="resultados-totais">
+
+                    <div class="resultado_dist">
+
+                        <div id="labelDP"></div>
+                        <div for="" id="labelMedia"></div>
+                        <div id="resultados"></div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Título resultados
+    <div class="section categories-tituloresultados">
+        <div class="container">
+            <div class="row">
+                <h3 class="titulo3">Resultados AQUI.</h3>
+            </div>
+        </div>
+    </div>-->
+
+
+
+    <!-- SCRIPTS
+    ––––––––––––––––––––––––––––––––––––––––––––––––––-->
+    <script src='../js/probabilidade/uniforme.js'></script>
+    <script src='../js/chart.js@2.8.0'></script>
+    <script src='../js/jquery-1.12.4.js'></script>
+    <script src='../js/jquery-ui.js'></script>
+    <script src='../js/ajustes.js'></script>
+
+    <!-- MENU
+    ––––––––––––––––––––––––––––––––––––––––––––––––––-->
+    <script src="../js/classie.js"></script>
+    <script src="../js/gnmenu.js"></script>
+    <script>
+        new gnMenu(document.getElementById('gn-menu'));
+    </script>
+
+</body>
+
+</html>

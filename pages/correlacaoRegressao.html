@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+    <!-- METAS BÁSICAS DA PÁGINA
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <meta charset="utf-8">
+    <title>Calculadora Estatística</title>
+    <meta name="description" content="Projeto de Estatística do 3º Ciclo de ADS da Fatec-Franca">
+
+
+    <!-- METAS ESPECÍFICAS PARA CELULAR
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <!-- <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" /> -->
+
+    <!-- FONTES E ÍCONES
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link rel="stylesheet" type="text/css" href="../css/fonts-googleApi-openSans.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+    <!-- CSS
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link rel="stylesheet" type="text/css" href="../css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="../css/skeleton.css">
+    <link rel="stylesheet" type="text/css" href="../css/main.css">
+    <link rel="stylesheet" type="text/css" href="../css/jquery-ui.css">
+
+    <!-- MENU
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link rel="stylesheet" type="text/css" href="../css/component.css" />
+
+    <!-- SCRIPT MENU
+    ––––––––––––––––––––––––––––––––––––––––––––––––––-->
+    <script src="../js/modernizr.custom.js"></script>
+
+    <!-- FAVICON
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link rel="icon" type="image/png" href="../imagens/favicon.png">
+
+
+</head>
+
+<body class="corpo">
+
+    <!-- ESTRUTURA DE LAYOUT
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <div class="section categories">
+
+        <div class="container">
+            <div class="row">
+                <div class="logo">
+                    <img src="../imagens/logo.png" alt="">
+                    
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <!-- MENU LATERAL
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
+    <div class="container-menu">
+        <!--barra superior do menu-->
+        <ul id="gn-menu" class="gn-menu-main">
+            <li class="gn-trigger">
+                <a class="gn-icon gn-icon-menu"><span>Menu</span></a>          
+                <li><a href="../index.html">Home</a></li>
+                <nav class="gn-menu-wrapper">
+                    <div class="gn-scroller">
+                        <ul class="gn-menu" id="menu-lateral">
+
+
+                            <a href="descritiva.html"><i class="material-icons">table_chart</i>Estatística
+                                Descritiva</a>
+                            <a href="distribuicaoNormal.html"><i class="material-icons">insights</i>Distribuição
+                                Normal</a>
+                            <a href="distribuicaoBinomial.html"><i
+                                    class="material-icons">pie_chart</i>Distribuição Binomial</a>
+                            <a href="distribuicaoUniforme.html"><i
+                                    class="material-icons">ssid_chart</i>Distribuição Uniforme</a>
+
+                            <a href="correlacaoRegressao.html"><i class="material-icons">troubleshoot</i>Correlação de
+                                Regressão</a>
+                             </ul>
+                    </div>
+                </nav>
+  
+        </ul>
+
+    </div>
+
+    <!-- CONTEUDO PRINCIPAL
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<br>
+
+
+    <!-- Título 2 -->
+    <div class="section categories-titulo2">
+        <h3 class="titulo">CORRELAÇÃO E REGRESSÃO</h3>
+    </div>
+
+    <!-- Calculadora Inferencial Correlação e Regressão-->
+
+    <!-- Ponto Mínimo -->
+    <div class="section categories-medidas">
+        <div class="container">
+            <div class="row">
+                <div class="ten column medidas">
+                    <label for="valoresX" class="textoDados">Valores de (X):</label>
+                    <input id="valoresX" type="text" class="valorX"
+                        placeholder="Insira aqui os valores de (X) separados por ponto e vírgula (;)">
+                    <br>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Ponto Máximo -->
+    <div class="section categories-medidas">
+        <div class="container">
+            <div class="row">
+                <div class="ten column medidas">
+                    <label for="valoresY" class="textoDados">Valores de (Y):</label>
+                    <input id="valoresY" type="text" class="valorY"
+                        placeholder="Insira aqui os valores de (Y) separados por ponto e vírgula (;).">
+                    <br>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <a name="resultado"></a>
+
+    <!-- Botões -->
+    <div class="section categories-botoes">
+        <div class="container">
+            <div class="row">
+                <div class="one-half column calcular">
+                    <a href="#resultado">
+                        <button id="calcularCorrelacao" value="Calcular" class="button-primary"
+                            aria-placeholder="Calcular">Calcular</button>
+                    </a>
+                </div>
+
+                <div class="one-half column limpar">
+                    <a href="#topo"><button type="reset" value="Limpar" class="button" placeholder="Limpar"
+                            onclick="Refresh()">Limpar</button></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <!-- Resultados -->
+    <!-- Tabela -->
+    <div class="section categories-projecao">
+        <div class="container">
+
+            <div class="row">
+                <div id="resultados" class="resultado_dist">
+                    <div id="resultadoCoeficiente"></div>
+                </div>
+            </div>
+
+            <!-- Regressão -->
+            <div class="row">
+                <div class="ten column cRegressao">
+                    <label for="projecao" class="textoDados">Havendo Forte Correlação, podemos com uma equação de
+                        Regressão
+                        fazer a projeção de uma variável em razão do relacionamento com a outra:</label>
+                    <select id="projecao" class="textoDadosCr">
+                        <option value="">Selecione a Variável</option>
+                        <option value="x">X</option>
+                        <option value="y">Y</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="ten column cRegressao">
+                    <label for="valoresP" class="textoDados">Se quiser obter (X) digite o valor de (Y) | Se (Y)
+                        digite o valor de (X):</label>
+                    <input id="valorRegrecao" type="number" name="valorP" class="textoDadosCr"
+                        placeholder=" Insira o valor de (X) ou (Y)">
+                    <br>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="ten column cRegressao">
+                    <button id="btn_projetar" value="Projetar" class="button-primary"
+                        aria-placeholder="Calcular">Calcular</button>
+                </div>
+            </div>
+
+            <!-- Grafíco -->
+            <div class="row">
+                <div class="graficos">
+                    <canvas id="myChart"></canvas>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Título resultados
+    <div class="section categories-tituloresultados">
+        <div class="container">
+            <div class="row">
+                <h3 class="titulo3">Resultados AQUI.</h3>
+            </div>
+        </div>
+    </div>-->
+
+    
+
+    <!-- SCRIPTS
+    ––––––––––––––––––––––––––––––––––––––––––––––––––-->
+    <script src='../js/correlacao_e_regressao/correlacao_regressao.js'></script>
+    <script src='../js/chart.js@2.8.0'></script>
+    <script src='../js/jquery-1.12.4.js'></script>
+    <script src='../js/jquery-ui.js'></script>
+    <script src='../js/ajustes.js'></script>
+
+    <!-- MENU
+    ––––––––––––––––––––––––––––––––––––––––––––––––––-->
+    <script src="../js/classie.js"></script>
+    <script src="../js/gnmenu.js"></script>
+    <script>
+        new gnMenu(document.getElementById('gn-menu'));
+    </script>
+
+</body>
+
+</html>
