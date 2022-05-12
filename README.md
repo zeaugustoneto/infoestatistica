@@ -1,8 +1,9 @@
-# zeaugustoneto.github.io  
+# infoestatística
 Minha versão do projeto de estatística. 
 
 Feito com objetivo de aprendizado. 
 Ainda em fase de ajustes e melhoras.  
+Você pode usá-lo acessando: https://zeaugustoneto.github.io/infoestatistica/  
 
 Tecnologias usadas: 
 <ul> 
